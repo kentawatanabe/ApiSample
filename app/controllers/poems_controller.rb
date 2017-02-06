@@ -6,9 +6,11 @@ class PoemsController < ApplicationController
   end
 
   def show
+    render json: @poem
   end
 
   private
     def set_poem
       @poem = Poem.find(params[:id])
+    end
 end
